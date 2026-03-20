@@ -10,72 +10,76 @@ html, body {
 }
 
 @font-face {
-    font-family:"hey";
-    src: url(/MagnetTrial-ExtraLight-BF65f3b2c458ace.otf);
+  font-family: "hey";
+  src: url(/MagnetTrial-ExtraLight-BF65f3b2c458ace.otf);
 }
 
 nav{
-    height: 10vh;
-    width: 100%;
-   
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    padding: 0 150px;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 0 150px;
 }
+
 .p-container{
-    display: flex;
-    font-family: hey;
-    gap: 20px;
-    color:#1D1D1B ;
-
+  display: flex;
+  font-family: hey;
+  gap: 20px;
+  color:#1D1D1B ;
 }
+
 .credit{
-    display: flex;
-    align-items: center;
-    margin-left: 40px;
-    
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
 }
-.credit p{
-   font-family: hey;
-    font-weight: 100;
-    font-size: 12px;
-}
-.icons{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-       
-}
-.icon-cont{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
-.shop{
-    border: 1px solid black;
-    border-radius: 3px;
 
+.credit p{
+  font-family: hey;
+  font-weight: 100;
+  font-size: 12px;
 }
+
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.shop{
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
 .profile{
-    border: 1px solid black;
-    border-radius: 3px;
-    
+  border: 1px solid black;
+  border-radius: 3px;
 }
+
+
+
 .hero{
   height: 100vh;
   width: 100%;
   background-color: #6c6c64;
   position: relative;
-
-
 }
+
 .hero img{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
 .overlay{
   height: 100%;
   width: 100%;
@@ -89,15 +93,20 @@ nav{
   padding-top: 100px;
   padding-bottom: 40px;
 }
+
 .overlay h1{
   font-size: 60px;
   font-family: hey;
   width: 60%;
 }
+
+
+
 .card-container{
   display: flex;
   gap: 20px;
 }
+
 .card {
   height: 280px;
   width: 280px;
@@ -111,6 +120,16 @@ nav{
   position: relative;
   border: 1px solid black;
 }
+
+.text-container{
+  height: 4vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .text-container p{
   font-size: 26px;
   font-family: hey;
@@ -121,39 +140,29 @@ nav{
 .card:hover{
   background-color: #FFFDF5;
 }
-.text-container{
-  height: 4vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
 
 .card:hover .text-container p{
   margin-top: -20%;
 }
+
+
+
 .para-container{
   width: 100%;
   position: absolute;
   display: flex;
-  align-items: start;
-  justify-content: start;
   flex-direction: column;
   gap: 5px;
   top: 10%;
-
-
 }
+
 .para-text-container{
-  gap: 20px;
-   
-  font-size: 15px;
   position: relative;
   height: 2vh;
   width: 100%;
   overflow: hidden;
 }
+
 .para-text-container p{
   font-family: hey;
   font-size: 12px;
@@ -166,6 +175,7 @@ nav{
 .card:hover .para-text-container p{
   bottom: 0;
 }
+
 .line-horizontal{
   height: 1px;
   width: 0%;
@@ -175,9 +185,13 @@ nav{
   left: 10px;
   transition: all ease 0.5s;
 }
+
 .card:hover .line-horizontal{
   width: 90%;
 }
+
+
+
 .button-container{
   position: absolute;
   display: flex;
@@ -188,12 +202,71 @@ nav{
   opacity: 0;
   transition: all ease 0.5s;
 }
+
 .button-container p{
   font-family: hey;
   font-size: 12px;
-
 }
+
 .card:hover .button-container{
   opacity: 1;
   bottom: 7%;
+}
+
+
+.marquee{
+  height: 100vh;
+  width: 100%;
+  background-color: #dfdac6;
+  position: relative;
+  overflow: hidden;
+}
+.marquee img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
+.marquee-overlay{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  
+}
+.marquee-track-top{
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ansh 10s linear infinite;
+}
+@keyframes ansh {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+  
+}
+.marquee-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.marquee-container h1{
+  color: black;
+  font-size: 80px;
+  font-weight: 500;
+  font-family: hey;
+}
+.marquee-track-bottom{
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ansh 10s linear infinite;
 }
